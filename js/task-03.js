@@ -14,19 +14,6 @@ const images = [
 ];
 const list = document.querySelector('ul');
 
-// function createMarkup(images) {
-//   const markup = images
-//     .map(
-//       ({ url, alt }) => `<li>
-// <img src="${url}" alt="${alt}"  width="300"/>
-//   </li>`
-//     )
-//     .join('');
-
-//   list.insertAdjacentHTML('beforeend', markup);
-//   // console.log(markup);
-// }
-// createMarkup(images);
 list.style.display = 'flex';
 list.style.gap = '20px';
 list.style.listStyle = 'none';
