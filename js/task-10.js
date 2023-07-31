@@ -10,14 +10,16 @@ const elements = {
   div: document.querySelector('#boxes'),
 };
 function createBoxes(amount) {
+  const arr = [];
   for (let index = 0; index < amount; index++) {
     const box = document.createElement('div');
     let size = 30 + index * 10;
     box.style.width = `${size}px`;
     box.style.height = `${size}px`;
     box.style.backgroundColor = `${getRandomHexColor()}`;
-    elements.div.append(box);
+    arr.push(box);
   }
+  elements.div.append(...arr);
 }
 
 elements.btnCreate.addEventListener('click', handlerNumbers);
