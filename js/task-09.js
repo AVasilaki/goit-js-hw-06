@@ -4,10 +4,11 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 const btn = document.querySelector('.change-color');
+const body = document.querySelector('body');
+const color = document.querySelector('.color');
 btn.addEventListener('click', handlerChangeColor);
 function handlerChangeColor(evt) {
-  const body = document.querySelector('body');
-  const color = document.querySelector('.color');
-  body.style.backgroundColor = `${getRandomHexColor()}`;
-  color.textContent = `${getRandomHexColor()}`;
+  const rundomColor = getRandomHexColor();
+  body.style.backgroundColor = rundomColor;
+  color.textContent = rundomColor;
 }
